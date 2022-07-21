@@ -1,0 +1,334 @@
+:root {
+  --primary-color: #ffb922;
+  --secondary-color: #0b0b1fb7;
+  --neutral-color: #ffffff;
+  --accent-color: #590696;
+}
+
+body {
+  height: 100vh;
+}
+
+a {
+  text-decoration: underline;
+}
+
+.title-primary {
+  font-weight: bold !important;
+  color: var(--primary-color) !important;
+}
+
+.title-secondary {
+  font-weight: bold !important;
+  color: var(--accent-color) !important;
+}
+
+/* Navbar */
+.navbar {
+  background-color: rgba(0, 0, 0, 0.3) !important;
+}
+
+.navbar-nav a,
+.nav a {
+  color: var(--neutral-color) !important;
+}
+
+.navbar-nav a:hover,
+.navbar-brand,
+.title-primary,
+.offcanvas-title,
+#footer-container #footer-brand,
+#footer-container a:hover {
+  color: var(--primary-color) !important;
+}
+
+.navbar-nav,
+.navbar-brand,
+.title-primary,
+.offcanvas-title {
+  text-transform: uppercase;
+}
+
+.navbar-toggler {
+  border: none;
+  outline: none;
+}
+
+.btn-outline-custom {
+  color: var(--neutral-color) !important;
+  border: 2px solid var(--primary-color) !important;
+}
+
+.btn-outline-custom:focus,
+.btn-outline-custom:hover {
+  color: var(--primary-color);
+  background-color: var(--primary-color);
+}
+
+/* Offcanvas Nav */
+.offcanvas {
+  /* width: 100vw !important; */
+  background-color: rgba(0, 0, 0, 0.9) !important;
+}
+
+/* Hero */
+.masthead {
+  background-color: rgba(0, 0, 0, 1);
+  background-size: cover;
+  background-position: center;
+  min-height: 75vh;
+  color: white;
+  position: relative;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  font-size: calc(1.525rem + 5vw);
+}
+
+.color-overlay {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .masthead {
+    min-height: 90vh;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .offcanvas {
+    width: 100vw !important;
+  }
+}
+
+/* Animations */
+.animate__animated.animate__fadeInUp {
+  --animate-duration: 1.3s;
+}
+
+.delay-1 {
+  animation-delay: 0.25s;
+}
+.delay-2 {
+  animation-delay: 0.5s;
+}
+.delay-3 {
+  animation-delay: 0.75s;
+}
+.delay-4 {
+  animation-delay: 1s;
+}
+.delay-5 {
+  animation-delay: 1.25s;
+}
+
+/* Features */
+#features-title,
+#reviews-title {
+  color: var(--primary-color) !important;
+}
+
+#features-container svg {
+  margin-top: 1rem !important;
+}
+
+.feature-img-container {
+  background-color: var(--accent-color);
+  height: 225px;
+  width: 225px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  border: 25px solid #f5d183;
+}
+
+#reviews-container .card-text,
+#influencers-container .card-text {
+  position: relative;
+}
+
+#reviews-container .card-text::before,
+#influencers-container .card-text::before {
+  content: url("../assets/icons/quotation-mark-sm.png");
+  position: absolute;
+  left: -15px;
+  top: -45px;
+  transform: rotateY(180deg);
+}
+
+.card-title {
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.card-title span {
+  text-transform: initial;
+}
+
+/* About */
+#about-container {
+  background-color: var(--accent-color) !important;
+  color: var(--neutral-color) !important;
+}
+
+#about-container .container-md {
+  margin-inline: auto;
+}
+
+#about-img-box img {
+  max-width: 60% !important;
+}
+
+@media screen and (min-width: 768px) {
+  #about-img-box img {
+    max-width: 80% !important;
+  }
+}
+
+.about-details {
+  text-align: end;
+}
+
+.adv-feature-img-box {
+  margin-top: 0.8rem;
+}
+
+/* Review */
+#reviews-container .card-text,
+#influencers-container .card-text {
+  text-align: center;
+  font-style: italic;
+}
+
+.card-img-top {
+  border: 5px solid var(--accent-color);
+  border-radius: 50%;
+  width: 4rem;
+}
+
+.stars-container > img {
+  width: 1.3rem;
+  height: auto;
+}
+
+.soc-med-btns {
+  background: transparent !important;
+  border: none !important;
+}
+
+.soc-med-btns > img {
+  width: 3rem !important;
+  height: auto !important;
+}
+
+.social-media-container a {
+  color: var(--neutral-color) !important;
+}
+
+@media screen and (min-width: 768px) {
+  .card-img-top {
+    width: 6rem;
+  }
+  .soc-med-btns > img {
+    width: 2.5rem !important;
+    height: auto !important;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .card-img-top {
+    width: 8rem;
+  }
+}
+
+.call2action-btn {
+  background: conic-gradient(
+      from -135deg,
+      var(--primary-color) 0 90deg,
+      var(--accent-color) 0
+    ),
+    conic-gradient(
+      from -135deg,
+      var(--accent-color) 0 90deg,
+      var(--primary-color) 0
+    );
+  -webkit-background-clip: text, padding-box;
+  background-clip: text, padding-box;
+  background-size: 200% 103%;
+  background-position: right;
+  transition: 0.5s;
+}
+
+.call2action-btn:hover {
+  background-color: var(--accent-color) !important;
+  background-position: center;
+}
+
+/* Download */
+#download-container {
+  background-color: var(--accent-color) !important;
+}
+
+.download-img-box img {
+  max-width: 50%;
+}
+
+@media screen and (min-width: 992px) {
+  .download-img-box img {
+    max-width: 70%;
+  }
+
+  .badge-container img {
+    max-width: 60%;
+  }
+}
+
+.badge-container img {
+  cursor: pointer;
+}
+
+/* Footer */
+#footer-container {
+  background-color: rgba(0, 0, 0, 0.9) !important;
+  color: var(--neutral-color) !important;
+}
+
+/* Back to home links  */
+#back-to-home-link {
+  color: var(--primary-color) !important;
+  margin-left: -3px !important;
+}
+
+#less-than-symbol {
+  background: transparent !important;
+  border: none !important;
+}
+
+/* FAQ */
+.accordion {
+  border: 3px solid var(--accent-color);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.accordion-button:not(.collapsed) {
+  color: var(--accent-color);
+  background-color: rgba(255, 188, 42, 0.712);
+  font-weight: bold;
+}
+
+.accordion-button::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f059";
+  padding-right: 0.5rem;
+}
